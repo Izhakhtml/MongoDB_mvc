@@ -5,7 +5,10 @@
   "main": "server/Server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon node server/Server.js"
+    "start-dev": "nodemon node server/Server.js",
+    "start": "node server/Server.js",
+    "setup":"npm install && npm run start",
+    "heroku-postbuild":"npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
