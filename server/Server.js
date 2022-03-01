@@ -8,8 +8,7 @@ const port = process.env.PORT || 8000
 App.use(cors());
 App.use(express.json());
 App.use('/api',EmployeesRouter);
-
+App.listen(port);
 App.get("/",(req,res)=>{
     res.send('<h1>wellcome there;</h1>')
 })
-App.listen(port);

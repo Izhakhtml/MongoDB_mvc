@@ -15,7 +15,7 @@ const Create = async (req, res) => {
     .catch(reject => res.status(404).send({message: reject}))
 }
 const Update = async(req, res) => {
-    await employees.findOneAndUpdate(ireq.params.id,req.body)
+    await employees.findOneAndUpdate(req.params.id,req.body)
     .then(() => res.send("updated successfully"))
     .catch(reject => res.status(404).send({message: reject}))
 }
